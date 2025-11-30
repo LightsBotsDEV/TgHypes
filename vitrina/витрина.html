@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Витрина ботов TgHypes</title>
+<style>
+/* Шрифты */
+@font-face {
+    font-family: 'Nasalization rg';
+    src: url('fonts/nasalization-rg.woff2') format('woff2'),
+         url('fonts/nasalization-rg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Общие стили страницы */
+body {
+    background: linear-gradient(180deg, #000000 0%, #111111 100%);
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    margin: 40px;
+    padding: 6px;
+}
+
+/* Заголовки карточек */
+h2 {
+    font-family: 'Nasalization rg', sans-serif;
+}
+
+/* Hover-анимация для текста */
+h2:hover, p:hover {
+    color: rgb(0, 191, 255);
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+/* Контейнер карточек */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Карточка */
+.card {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Картинка */
+.card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* 3D-кнопка */
+.btn-3d {
+    background: lime;
+    color: whitesmoke;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 6px #0f5ea8;
+    transition: 0.2s;
+}
+
+.btn-3d:active {
+    box-shadow: 0 2px #0f5ea8;
+    transform: translateY(4px);
+}
+
+.btn-3d:focus {
+    outline: none;
+    box-shadow: 0 6px #0f5ea8, 0 0 0 3px red;
+    transform: scale(1.05);
+}
+
+/* Поля ввода */
+.input-field {
+  width: 100%;
+  max-width: 320px;
+  padding: 12px 16px;
+  font-size: 16px;
+  background: linear-gradient(135deg, #ffffff 0%, #f7f9fc 100%);
+  border: 1px solid #dfe3ea;
+  border-radius: 12px;
+  box-shadow: 0 3px 0 #c4c4c4, 0 6px 12px rgba(0,0,0,0.1);
+  outline: none;
+  transition: 0.25s ease;
+}
+
+.input-field:focus {
+  border-color: #98b9ff;
+  background: linear-gradient(135deg, #ffffff 0%, #eef3ff 100%);
+  box-shadow: 0 3px 0 #9ab7ff, 0 6px 14px rgba(152,185,255,0.4);
+}
+
+.input-field:hover {
+  color: rgb(0, 191, 255);
+  transform: scale(1.07);
+  box-shadow: 0 4px 0 #bfc7ff, 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: 0.2s;
+}
+
+.input-field:active {
+  transform: scale(1.03) translateY(2px);
+  box-shadow: 0 1px 0 #b8b8b8, 0 3px 6px rgba(0,0,0,0.15);
+}
+
+/* Языки программирования (прогресс-бары) */
+.lang {
+    margin-top: 12px;
+    text-align: left;
+}
+
+.lang p {
+    margin: 6px 0 2px 0;
+    font-size: 14px;
+}
+
+.lang .percent {
+    float: right;
+}
+
+.bar-bg {
+    width: 100%;
+    height: 8px;
+    background-color: #555;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.bar-fill {
+    height: 8px;
+    background-color: #00bfff;
+    border-radius: 4px;
+}
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center;">Витрина ботов TgHypes</h1>
+
+<div style="text-align:center; margin-bottom: 40px;">
+    <input type="text" class="input-field" placeholder="Поиск бота...">
+</div>
+
+<div class="container">
+    <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Бот 1">
+        <h2>Бот 1</h2>
+        <button class="btn-3d">Посмотреть</button>
+        <div class="lang">
+            <p>Python <span class="percent">100%</span></p>
+            <div class="bar-bg"><div class="bar-fill" style="width:100%;"></div></div>
+            <p>C++ <span class="percent">30%</span></p>
+            <div class="bar-bg"><div class="bar-fill" style="width:30%;"></div></div>
+            <p>Java <span class="percent">60%</span></p>
+            <div class="bar-bg"><div class="bar-fill" style="width:60%;"></div></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Бот 2">
+        <h2>Бот 2</h2>
+        <button class="btn-3d">Посмотреть</button>
+        <div class="lang">
+            <p>Python <span class="percent">80%</span></p>
+            <div class="bar-bg"><div class="bar-fill" style="width:80%;"></div></div>
+            <p>C++ <span class="percent">50%</span></p>
+            <div class="bar-bg"><div class="bar-fill" style="width:50%;"></div></div>
+            <p>Rust <span class="percent">20%</span></p>
+            <div class="bar-bg"><div class="bar-fill" style="width:20%;"></div></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Бот 3">
+        <h2>Бот 3</h2>
+        <button class="btn-3d">Посмотреть</button>
+        <div class="lang">
+            <p>Java <span class="percent">70%</span></p>
+            <div class="bar-bg"><div class="bar-fill" style="width:70%;"></div></div>
+            <p>Python <span class="percent">60%</span></p>
+            <div class="bar-bg"><div class="bar-fill" style="width:60%;"></div></div>
+            <p>Kotlin <span class="percent">40%</span></p>
+            <div class="bar-bg"><div class="bar-fill" style="width:40%;"></div></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Бот 4">
+        <h2>Бот 4</h2>
+        <button class="btn-3d">Посмотреть</button>
+        <div class="lang">
+            <p>Python <span class="percent">90%</span></p>
+            <div class="bar-bg"><div class="bar-fill" style="width:90%;"></div></div>
+            <p>JavaScript <span class="percent">70%</span></p>
+            <div class="bar-bg"><div class="bar-fill" style="width:70%;"></div></div>
+            <p>C++ <span class="percent">50%</span></p>
+            <div class="bar-bg"><div class="bar-fill" style="width:50%;"></div></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Бот 5">
+        <h2>Бот 5</h2>
+        <button class="btn-3d">Посмотреть</button>
+        <div class="lang">
+            <p>Python <span class="percent">100%</span></p>
+            <div class="bar-bg"><div class="bar-fill" style="width:100%;"></div></div>
+            <p>Rust <span class="percent">60%</span></p>
+            <div class="bar-bg"><div class="bar-fill" style="width:60%;"></div></div>
+            <p>Go <span class="percent">30%</span></p>
+            <div class="bar-bg"><div class="bar-fill" style="width:30%;"></div></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Бот 6">
+        <h2>Бот 6</h2>
+        <button class="btn-3d">Посмотреть</button>
+        <div class="lang">
+            <p>Java <span class="percent">80%</span></p>
+            <div class="bar-bg"><div class="bar-fill" style="width:80%;"></div></div>
+            <p>Python <span class="percent">50%</span></p>
+            <div class="bar-bg"><div class="bar-fill" style="width:50%;"></div></div>
+            <p>Kotlin <span class="percent">20%</span></p>
+            <div class="bar-bg"><div class="bar-fill" style="width:20%;"></div></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
