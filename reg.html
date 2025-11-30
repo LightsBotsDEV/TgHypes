@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>TgHypes - Регистрация</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h2>TgHypes - Регистрация</h2>
+<input type="text" placeholder="Введите никнейм" class="input-field" id="nickInput">
+<input type="password" placeholder="Введите пароль" class="input-field" id="passInput">
+<button class="btn-3d" id="registerBtn">Зарегистрироваться</button>
+<p>или</p>
+<button id="guestBtn">Не Хочу Регистрироваться (войти как гость)</button>
+
+<!-- Подключаем user.js -->
+<script src="user.js"></script>
+
+<script>
+    const nickInput = document.getElementById("nickInput");
+    const passInput = document.getElementById("passInput");
+    const registerBtn = document.getElementById("registerBtn");
+    const guestBtn = document.getElementById("guestBtn");
+
+    // Кнопка "Зарегистрироваться"
+    registerBtn.addEventListener("click", () => {
+        // Сохраняем данные в глобальный объект
+        window.USERPARAMS.nick = nickInput.value;
+        window.USERPARAMS.password = passInput.value;
+
+        console.log("Регистрация завершена:", window.USERPARAMS);
+
+        // Можно добавить переход на другую страницу или скрыть форму
+        alert("Регистрация успешна!");
+    });
+
+    // Кнопка "Войти как гость"
+    guestBtn.addEventListener("click", () => {
+        console.log("Вход как гость, USERPARAMS не изменён");
+        alert("Вы вошли как гость!");
+    });
+</script>
+
+</body>
+</html>
